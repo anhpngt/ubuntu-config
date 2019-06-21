@@ -1,0 +1,2 @@
+# Quick activation of Python environment
+alias pyact='source venv/bin/activate'

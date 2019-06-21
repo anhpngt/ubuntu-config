@@ -1,0 +1,31 @@
+{
+    "window.titleBarStyle": "custom",
+    "workbench.colorTheme": "Monokai",
+    "editor.tokenColorCustomizations": {
+        "[Monokai]": {
+            "textMateRules": [
+                {
+                    "scope": "meta.function-call.generic, meta.function-call.object, meta.function-call.static",
+                    "settings": {
+                        "foreground": "#A6E22E"
+                    }
+                }
+            ]
+        }
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": -1,
+    "git.autofetch": true,
+    "explorer.confirmDelete": false,
+    // Python Linting & Formatting
+    "python.linting.pylintEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pep8Args": [
+        "--max-line-length=120"
+    ],
+    "python.formatting.autopep8Args": [
+        "--max-line-length=120"
+    ],
+    "python.sortImports.args": ["-sl"]  // Force single-lined
+}
