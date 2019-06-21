@@ -16,6 +16,10 @@ cp configs/terminator/config ~/.configs/terminator/config
 
 * Additional lines for `~/.bashrc`
 
+```bash
+cat configs/bash/bash-addition >> ~/.bashrc
+```
+
 ## Package installation
 
 ```bash
