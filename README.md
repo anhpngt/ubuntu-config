@@ -24,4 +24,5 @@ cat configs/bash/bash-addition >> ~/.bashrc
 
 ```bash
 sudo bash install-packages.sh
+sudo bash install-openjdk.sh
 ```
