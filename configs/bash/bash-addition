@@ -1,2 +1,7 @@
 # Quick activation of Python environment
 alias pyact='source venv/bin/activate'
+
+# Keyboard mappings
+setxkbmap -option ctrl:nocaps
+xcape -e 'Control_L=Escape'
+
