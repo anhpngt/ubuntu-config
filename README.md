@@ -18,13 +18,14 @@ cp configs/terminator/config ~/.configs/terminator/config
 
 ```bash
 sudo apt install xcape
-// Follow up with adding config to ~/.bashrc
+// Follow up with adding config to ~/.profile
 ```
 
-* Additional lines for `~/.bashrc`
+* Additional lines for `~/.bashrc` and `~/.profile`
 
 ```bash
 cat configs/bash/bash-addition >> ~/.bashrc
+cat configs/profile-addition >> ~/.profile
 ```
 
 ## Package installation
