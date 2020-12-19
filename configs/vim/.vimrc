@@ -1,0 +1,17 @@
+set ts=4 expandtab
+set shiftwidth=4
+set autoindent
+set smartindent
+
+set nocompatible
+syntax on
+set shortmess+=I
+set laststatus=2
+set backspace=indent,eol,start
+set noerrorbells visualbell t_vb=
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap jk <esc>
