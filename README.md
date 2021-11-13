@@ -24,13 +24,24 @@
 - htop: `sudo apt -y install htop`
 - [VS Code](https://code.visualstudio.com/). Settings are sync'ed with Github account.
 - [ibus-bamboo](https://github.com/BambooEngine/ibus-bamboo)
+- Additional configs for `~/.bashrc`
+  - PS1 value for bash
 
-* Additional lines for `~/.bashrc` and `~/.profile`
+    ```bash
+    PS1='┌─[\[\e[01;32m\]\u\[\e[00m\]@\[\e[01;32m\]\h\[\e[00m\]:\[\e[1;34m\]\w\[\e[0m\]]$(__git_ps1 " (%s) ")\n└─╼ '
+    ```
 
-```bash
-cat configs/bash/bash-addition >> ~/.bashrc
-cat configs/profile-addition >> ~/.profile
-```
+  - Other configs
+
+    ```bash
+    # Custom preferences
+    alias s='ls'
+    alias gotest='go test -count=1 -cover -covermode=count -coverprofile=cover.out -coverpkg=./... ./...'
+    alias gohtml='go tool cover -html=cover.out'
+    alias kmsdc='gcloud kms decrypt --project dev-manabie-online --location global --keyring deployments --key github-actions --plaintext-file - --ciphertext-file'
+    alias kmsec='gcloud kms decrypt --project dev-manabie-online --location global --keyring deployments --key github-actions --ciphertext-file - --plaintext-file'
+    alias gitl='git log --all --decorate --online --graph'
+    ```
 
 ## Package installation
 
