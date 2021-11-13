@@ -1,6 +1,16 @@
 # ubuntu-config
 
-## Configs
+## Installation & Configs
+
+- Google Chrome
+- Nvidia Driver
+  - Go to `Software & Updates` -> `Additional Drivers` -> Choose `Using NVIDIA driver metapackage from nvidia-driver-xxx (proprietary, tested)`
+- git
+  ```sh
+    sudo apt install git
+    git config --global user.email "anh.pngt@gmail.com"
+    git config --global user.name "Tuan Anh"
+  ``` 
 
 * VS Code
 
