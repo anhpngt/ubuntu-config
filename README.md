@@ -43,6 +43,12 @@
     alias gitl='git log --all --decorate --online --graph'
     ```
 
+- [Gnome extensions](https://extensions.gnome.org/):
+  - [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
+  - [Pixel Saver](https://extensions.gnome.org/extension/723/pixel-saver/)
+  - [Put Windows](https://extensions.gnome.org/extension/39/put-windows/)
+  - [Touchpad Indicator](https://extensions.gnome.org/extension/131/touchpad-indicator/)
+
 ## Package installation
 
 ```bash
