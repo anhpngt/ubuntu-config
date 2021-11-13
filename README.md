@@ -4,7 +4,10 @@
 
 - Google Chrome
 - Nvidia Driver
-  - Go to `Software & Updates` -> `Additional Drivers` -> Choose `Using NVIDIA driver metapackage from nvidia-driver-xxx (proprietary, tested)`
+  - Go to application `Software & Updates` -> `Additional Drivers` -> Choose `Using NVIDIA driver metapackage from nvidia-driver-xxx (proprietary, tested)`
+- Mapping `Caps Lock` to `Control`:
+  - Install Tweak Tool: `sudo apt install gnome-tweak-tool`
+  - Go to application `Tweaks` -> `Keyboard & Mouse` -> `Overview Shortcut` -> `Additional Layout Options` -> `Ctrl position` -> Tick `Caps Lock as Ctrl`
 - git
   ```sh
     sudo apt install git
