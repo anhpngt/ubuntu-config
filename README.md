@@ -13,7 +13,7 @@
   ``` 
 - SSH & GPG key
   - [Github SSH instruction](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-  - [Github GPG instruction](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
+  - [Github GPG instruction](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key). GPG passphrase is saved in Ubuntu's password manager for convenience.
 
 * VS Code
 
