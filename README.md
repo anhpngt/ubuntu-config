@@ -22,7 +22,8 @@
 - vim: `./install_vim.bash`
 - terminator: `./install_terminator.bash`
 - htop: `sudo apt -y install htop`
-- VS Code. Settings are sync'ed with Github account.
+- [VS Code](https://code.visualstudio.com/). Settings are sync'ed with Github account.
+- [ibus-bamboo](https://github.com/BambooEngine/ibus-bamboo)
 
 * Additional lines for `~/.bashrc` and `~/.profile`
 
