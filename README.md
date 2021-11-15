@@ -43,6 +43,13 @@
     alias gitl='git log --all --decorate --online --graph'
     ```
 
+- Skip grub boot menu
+
+  ```bash
+  echo 'set timeout_style=hidden
+  set timeout=0' | sudo tee /boot/grub/custom.cfg
+  ```
+
 - [Gnome extensions](https://extensions.gnome.org/):
   - [Dash to Panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
   - [Pixel Saver](https://extensions.gnome.org/extension/723/pixel-saver/)
