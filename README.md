@@ -9,11 +9,11 @@
   - Install Tweak Tool: `sudo apt install gnome-tweak-tool`
   - Go to application `Tweaks` -> `Keyboard & Mouse` -> `Overview Shortcut` -> `Additional Layout Options` -> `Ctrl position` -> Tick `Caps Lock as Ctrl`
 - git
-  
+
   ```sh
-    sudo apt install git
-    git config --global user.email "anh.pngt@gmail.com"
-    git config --global user.name "Tuan Anh"
+  sudo apt install git
+  git config --global user.email "anh.pngt@gmail.com"
+  git config --global user.name "Tuan Anh"
   ```
 
 - SSH & GPG key
