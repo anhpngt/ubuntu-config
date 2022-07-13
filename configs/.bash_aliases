@@ -1,6 +1,17 @@
-# kubectl
-alias k=kubectl
-complete -F __start_kubectl k
+if command -v kubectl >/dev/null; then
+  source <(kubectl completion bash)
+  alias k=kubectl
+  complete -F __start_kubectl k
+fi
+if command -v helm >/dev/null; then
+  source <(helm completion bash)
+fi
+if command -v minikube >/dev/null; then
+  source <(minikube completion bash)
+fi
+if command -v kind >/dev/null; then
+  source <(kind completion bash)
+fi
 
 alias kstag='echo -e "Connecting to Manabie Staging GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/staging.yaml'
 alias kmana='echo -e "Connecting to Manabie Production GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/manabie.yaml'
