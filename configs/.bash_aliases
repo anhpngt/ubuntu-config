@@ -22,6 +22,9 @@ fi
 if command -v kind >/dev/null; then
   source <(kind completion bash)
 fi
+if command -v skaffold >/dev/null; then
+  source <(skaffold completion bash)
+fi
 if command -v git >/dev/null; then
   source /usr/share/bash-completion/completions/git
   alias g='git'
@@ -37,18 +40,22 @@ if command -v git >/dev/null; then
   alias gitd='git checkout develop'
   alias gitrl='git checkout $(git branch --all --list '*origin/release/20*' | sort -r | head -n 1 | cut -c18-)'
 fi
+if command -v go >/dev/null; then
+  alias testunit='go test -count=1 ./internal/... -cover -covermode=count -coverprofile=cover.out -coverpkg=./internal/...'
+  alias gotest='go test -count=1 -cover -covermode=count -coverprofile=cover.out -coverpkg=./... ./...'
+  alias gohtml='go tool cover -html=cover.out'
+fi
+if command -v terraform >/dev/null; then
+  complete -C /usr/bin/terraform terraform
+  alias tf='terraform'
+  complete -C /usr/bin/terraform tf
 
-# go
-alias testunit='go test -count=1 ./internal/... -cover -covermode=count -coverprofile=cover.out -coverpkg=./internal/...'
-alias gotest='go test -count=1 -cover -covermode=count -coverprofile=cover.out -coverpkg=./... ./...'
-alias gohtml='go tool cover -html=cover.out'
-
-# skaffold
-source <(skaffold completion bash)
-
-# terraform && terragrunt
-alias hclfmt='terragrunt hclfmt'
-alias render-json='terragrunt render-json'
+  if command -v terragrunt >/dev/null; then
+    alias tg='terragrunt'
+    alias hclfmt='terragrunt hclfmt'
+    alias render-json='terragrunt render-json'
+  fi
+fi
 
 # Miscellaneous
 alias s='ls'
