@@ -55,3 +55,15 @@
   - [Pixel Saver](https://extensions.gnome.org/extension/723/pixel-saver/)
   - [Put Windows](https://extensions.gnome.org/extension/39/put-windows/)
   - [Touchpad Indicator](https://extensions.gnome.org/extension/131/touchpad-indicator/)
+
+- Fix Keychron keyboard having issue with `fn` key
+
+  ```bash
+  ./keychron_keyboard.sh
+  ```
+
+- Setup keyboard shortcuts in GNOME
+
+  ```bash
+  ./keyboard_shortcuts.sh
+  ```
