@@ -35,6 +35,8 @@ if command -v git >/dev/null; then
   __git_complete gpl _git_pull
   alias gb='git branch'
   __git_complete gb _git_branch
+  alias gp='git push'
+  __git_complete gp _git_push
 
   alias gitl='git log --all --decorate --oneline --graph'
   alias gitd='git checkout develop'
