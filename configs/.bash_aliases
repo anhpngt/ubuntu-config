@@ -41,6 +41,8 @@ if command -v git >/dev/null; then
   alias gitl='git log --all --decorate --oneline --graph'
   alias gitd='git checkout develop'
   alias gitrl='git checkout $(git branch --all --list '*origin/release/20*' | sort -r | head -n 1 | cut -c18-)'
+  alias gbd='git branch --merged | grep -v "^\*" | xargs -r git branch -d'
+  alias gfd='git fetch origin develop:develop'
 fi
 if command -v go >/dev/null; then
   alias testunit='go test -count=1 ./internal/... -cover -covermode=count -coverprofile=cover.out -coverpkg=./internal/...'
