@@ -64,6 +64,9 @@ if command -v terraform >/dev/null; then
     alias render-json='terragrunt render-json'
   fi
 fi
+if command -v sops >/dev/null; then
+  alias sopsd='sops --input-type yaml --output-type yaml -d /dev/stdin'
+fi
 
 # Miscellaneous
 alias s='ls'
