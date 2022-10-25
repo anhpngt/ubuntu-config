@@ -45,15 +45,18 @@ if command -v git >/dev/null; then
   alias gfd='git fetch origin develop:develop'
   alias gmd='git merge develop -S'
 fi
+if command -v gh >/dev/null; then
+  source <(gh completion -s bash)
+fi
 if command -v go >/dev/null; then
   alias testunit='go test -count=1 ./internal/... -cover -covermode=count -coverprofile=cover.out -coverpkg=./internal/...'
   alias gotest='go test -count=1 -cover -covermode=count -coverprofile=cover.out -coverpkg=./... ./...'
   alias gohtml='go tool cover -html=cover.out'
 fi
 if command -v terraform >/dev/null; then
-  complete -C /usr/bin/terraform terraform
+  complete -C /usr/local/bin/terraform terraform
   alias tf='terraform'
-  complete -C /usr/bin/terraform tf
+  complete -C /usr/local/bin/terraform tf
 
   if command -v terragrunt >/dev/null; then
     alias tg='terragrunt'
