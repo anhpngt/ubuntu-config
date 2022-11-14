@@ -65,7 +65,7 @@ if command -v terraform >/dev/null; then
   fi
 fi
 if command -v sops >/dev/null; then
-  alias sopsd='sops --input-type yaml --output-type yaml -d /dev/stdin'
+  alias sopsd='sops --input-type yaml --output-type yaml -d /dev/stdin | yq'
 fi
 
 # Miscellaneous
