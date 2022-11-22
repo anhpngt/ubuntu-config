@@ -79,3 +79,7 @@ alias bp='cd ~/Desktop/manabie/backend-parallel/'
 alias bt='cd ~/Desktop/manabie/backend-third/'
 alias btf='cd ~/Desktop/manabie/backend-terraform'
 alias sa='cd ~/Desktop/manabie/samena/'
+
+if command -v samena >/dev/null; then
+  source <(samena completion bash)
+fi
