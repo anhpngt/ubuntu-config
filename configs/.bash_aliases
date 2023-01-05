@@ -44,6 +44,7 @@ if command -v git >/dev/null; then
   alias gbd='git branch --merged | grep -v "^\*" | xargs -r git branch -d'
   alias gfd='git fetch origin develop:develop'
   alias gmd='git merge develop -S'
+  alias gpf='git push --force-with-lease'
 fi
 if command -v gh >/dev/null; then
   source <(gh completion -s bash)
