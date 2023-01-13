@@ -3,8 +3,7 @@ if command -v kubectl >/dev/null; then
   alias k=kubectl
   complete -F __start_kubectl k
 
-  alias kstag='echo -e "Connecting to Manabie Staging GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/staging.yaml'
-  alias kstag2='echo -e "Connecting to Manabie Staging 2 GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/staging-2.yaml'
+  alias kstag='echo -e "Connecting to Manabie Staging 2 GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/staging-2.yaml'
   alias kmana='echo -e "Connecting to Manabie Production GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/manabie.yaml'
   alias ktokyo='echo -e "Connecting to Tokyo Production GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/tokyo.yaml'
   alias kjprep='echo -e "Connecting to JPREP Production GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/jprep.yaml'
