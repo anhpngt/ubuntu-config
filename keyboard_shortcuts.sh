@@ -3,11 +3,11 @@
 set -eu
 
 list=(
-  "vscode.manabie.backend:code $HOME/Desktop/manabie/backend:<Primary><Shift>exclam"
-  "vscode.manabie.backend-parallel:code $HOME/Desktop/manabie/backend-parallel:<Primary><Shift>at"
-  "vscode.manabie.backend-third:code $HOME/Desktop/manabie/backend-third:<Primary><Shift>numbersign"
-  "vscode.manabie.backend-terraform:code $HOME/Desktop/manabie/backend-terraform:<Primary><Shift>dollar"
-  "vscode.manabie.backend-readonly:code $HOME/Desktop/manabie/backend-readonly:<Primary><Shift>percent"
+  "vscode.manabie.backend:code $HOME/manabie-com/backend:<Primary><Shift>exclam"
+  "vscode.manabie.backend2:code $HOME/manabie-com/backend2:<Primary><Shift>at"
+  "vscode.manabie.backend3:code $HOME/manabie-com/backend3:<Primary><Shift>numbersign"
+  "vscode.manabie.backend-tf:code $HOME/manabie-com/backend-tf:<Primary><Shift>dollar"
+  "vscode.manabie.backend-ro:code $HOME/manabie-com/backend-ro:<Primary><Shift>percent"
 )
 
 mkeyspath="org.gnome.settings-daemon.plugins.media-keys"

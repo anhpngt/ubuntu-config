@@ -3,10 +3,10 @@ if command -v kubectl >/dev/null; then
   alias k=kubectl
   complete -F __start_kubectl k
 
-  alias kstag='echo -e "Connecting to Manabie Staging 2 GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/staging-2.yaml'
-  alias kmana='echo -e "Connecting to Manabie Production GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/manabie.yaml'
-  alias ktokyo='echo -e "Connecting to Tokyo Production GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/tokyo.yaml'
-  alias kjprep='echo -e "Connecting to JPREP Production GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/jprep.yaml'
+  alias kstag='echo -e "Connecting to Manabie Staging 2 GKE" && export KUBECONFIG=~/manabie-com/k8s-clusters/staging-2.yaml'
+  alias kmana='echo -e "Connecting to Manabie Production GKE" && export KUBECONFIG=~/manabie-com/k8s-clusters/manabie.yaml'
+  alias ktokyo='echo -e "Connecting to Tokyo Production GKE" && export KUBECONFIG=~/manabie-com/k8s-clusters/tokyo.yaml'
+  alias kjprep='echo -e "Connecting to JPREP Production GKE" && export KUBECONFIG=~/manabie-com/k8s-clusters/jprep.yaml'
   alias kreset='echo -e "Resetting to the default config" && export KUBECONFIG=""'
   alias kjp='echo "Connecting to JP Partner Production GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/jp-partners.yaml'
 
@@ -39,7 +39,6 @@ if command -v git >/dev/null; then
 
   alias gitl='git log --all --decorate --oneline --graph'
   alias gitd='git checkout develop'
-  alias gitrl='git checkout $(git branch --all --list '*origin/release/20*' | sort -r | head -n 1 | cut -c18-)'
   alias gbd='git branch --merged | grep -v "^\*" | xargs -r git branch -d'
   alias gfd='git fetch origin develop:develop'
   alias gmd='git merge develop -S'
@@ -65,6 +64,7 @@ if command -v terraform >/dev/null; then
   fi
 fi
 if command -v sops >/dev/null; then
+  alias sd='sops --input-type yaml --output-type yaml -d /dev/stdin | yq'
   alias sopsd='sops --input-type yaml --output-type yaml -d /dev/stdin | yq'
 fi
 
@@ -73,12 +73,17 @@ alias s='ls'
 alias aptu='sudo apt update && sudo apt upgrade -y'
 
 alias c='code .'
-alias be='cd ~/Desktop/manabie/backend/'
-alias br='cd ~/Desktop/manabie/backend-readonly/'
-alias bp='cd ~/Desktop/manabie/backend-parallel/'
-alias bt='cd ~/Desktop/manabie/backend-third/'
-alias btf='cd ~/Desktop/manabie/backend-terraform'
-alias sa='cd ~/Desktop/manabie/samena/'
+alias b='cd ~/manabie-com/backend/'
+alias b2='cd ~/manabie-com/backend2/'
+alias b3='cd ~/manabie-com/backend3/'
+alias btf='cd ~/manabie-com/backend-tf/'
+alias br='cd ~/manabie-com/backend-ro/'
+# alias be='cd ~/Desktop/manabie/backend/'
+# alias br='cd ~/Desktop/manabie/backend-readonly/'
+# alias bp='cd ~/Desktop/manabie/backend-parallel/'
+# alias bt='cd ~/Desktop/manabie/backend-third/'
+# alias btf='cd ~/Desktop/manabie/backend-terraform'
+# alias sa='cd ~/Desktop/manabie/samena/'
 
 if command -v samena >/dev/null; then
   source <(samena completion bash)
