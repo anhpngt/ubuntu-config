@@ -66,6 +66,9 @@ if command -v sops >/dev/null; then
   alias sd='sops --input-type yaml --output-type yaml -d /dev/stdin | yq'
   alias sopsd='sops --input-type yaml --output-type yaml -d /dev/stdin | yq'
 fi
+if command -v argocd >/dev/null; then
+  source <(argocd completion bash)
+fi
 
 # Miscellaneous
 alias s='ls'
