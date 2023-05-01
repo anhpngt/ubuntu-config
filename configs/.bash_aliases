@@ -23,6 +23,13 @@ fi
 if command -v skaffold >/dev/null; then
   source <(skaffold completion bash)
 fi
+if command -v skaffoldv2 >/dev/null; then
+  if [[ $(type -t compopt) = "builtin" ]]; then
+    complete -o default -F __start_skaffold skaffoldv2
+  else
+    complete -o default -o nospace -F __start_skaffold skaffoldv2
+  fi
+fi
 if command -v git >/dev/null; then
   source /usr/share/bash-completion/completions/git
   alias g='git'
