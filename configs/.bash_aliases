@@ -14,9 +14,6 @@ fi
 if command -v helm >/dev/null; then
   source <(helm completion bash)
 fi
-if command -v minikube >/dev/null; then
-  source <(minikube completion bash)
-fi
 if command -v kind >/dev/null; then
   source <(kind completion bash)
 fi
@@ -73,8 +70,11 @@ if command -v sops >/dev/null; then
   alias sd='sops --input-type yaml --output-type yaml -d /dev/stdin | yq'
   alias sopsd='sops --input-type yaml --output-type yaml -d /dev/stdin | yq'
 fi
-if command -v argocd >/dev/null; then
-  source <(argocd completion bash)
+# if command -v argocd >/dev/null; then
+#   source <(argocd completion bash)
+# fi
+if command -v kamel >/dev/null; then
+  source <(kamel completion bash)
 fi
 
 # Miscellaneous
@@ -87,12 +87,6 @@ alias b2='cd ~/manabie-com/backend2/'
 alias b3='cd ~/manabie-com/backend3/'
 alias btf='cd ~/manabie-com/backend-tf/'
 alias br='cd ~/manabie-com/backend-ro/'
-# alias be='cd ~/Desktop/manabie/backend/'
-# alias br='cd ~/Desktop/manabie/backend-readonly/'
-# alias bp='cd ~/Desktop/manabie/backend-parallel/'
-# alias bt='cd ~/Desktop/manabie/backend-third/'
-# alias btf='cd ~/Desktop/manabie/backend-terraform'
-# alias sa='cd ~/Desktop/manabie/samena/'
 
 if command -v samena >/dev/null; then
   source <(samena completion bash)
