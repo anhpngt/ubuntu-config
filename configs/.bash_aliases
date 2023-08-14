@@ -76,6 +76,9 @@ fi
 if command -v kamel >/dev/null; then
   source <(kamel completion bash)
 fi
+if command -v k9s >/dev/null; then
+  alias k9s='k9s -c ns'
+fi
 
 # Miscellaneous
 alias s='ls'
