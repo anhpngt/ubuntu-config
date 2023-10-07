@@ -76,8 +76,9 @@ fi
 if command -v kamel >/dev/null; then
   source <(kamel completion bash)
 fi
-if command -v k9s >/dev/null; then
-  alias k9s='k9s -c ns'
+if command -v warp-cli >/dev/null; then
+  alias warpc='warp-cli connect'
+  alias warpd='warp-cli disconnect'
 fi
 
 # Miscellaneous
