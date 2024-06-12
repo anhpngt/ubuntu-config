@@ -95,3 +95,7 @@ alias br='cd ~/manabie-com/backend-ro/'
 if command -v samena >/dev/null; then
   source <(samena completion bash)
 fi
+
+if command -v istioctl >/dev/null; then
+  source <(istioctl completion bash)
+fi
