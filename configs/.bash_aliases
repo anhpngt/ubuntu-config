@@ -7,7 +7,8 @@ if command -v kubectl >/dev/null; then
   alias kmana='echo -e "Connecting to Manabie Production GKE" && export KUBECONFIG=~/manabie-com/k8s-clusters/manabie.yaml'
   alias ktokyo='echo -e "Connecting to Tokyo Production GKE" && export KUBECONFIG=~/manabie-com/k8s-clusters/tokyo.yaml'
   alias kreset='echo -e "Resetting to the default config" && export KUBECONFIG=""'
-  alias kjp='echo "Connecting to JP Partner Production GKE" && export KUBECONFIG=~/Desktop/manabie/k8s-clusters/jp-partners.yaml'
+  alias kjp='echo "Connecting to JP Partner Production GKE" && export KUBECONFIG=~/manabie-com/k8s-clusters/jp-partners.yaml'
+  alias kpre='echo "Connecting to Preproduction GKE" && export KUBECONFIG=~/manabie-com/k8s-clusters/dorp-tokyo.yaml'
 
   alias kns='kubectl config set-context --current --namespace'
 fi
